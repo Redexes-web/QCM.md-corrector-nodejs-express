@@ -21,8 +21,8 @@ Une fois le formulaire envoyé, vous devez raffraichir la page afin d'afficher l
 
 ## Structure du QCM.md
 
+Nom du fichier d'élève : nom_prenom_qcm.md || prenom_nom_qcm.md
 ```md
-//nom du fichier : nom_prenom_qcm.md || prenom_nom_qcm.md
 ## Question X
 
 Question ? // le ? est necessaire au bon fonctionnement du programme

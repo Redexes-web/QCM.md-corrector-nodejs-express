@@ -21,7 +21,7 @@ Une fois le formulaire envoyé, vous devez raffraichir la page afin d'afficher l
 
 ## Structure du QCM.md
 
-````md
+```md
 ## Question X
 
 Question ? // le ? est necessaire au bon fonctionnement du programme

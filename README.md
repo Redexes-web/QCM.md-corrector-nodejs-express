@@ -1,5 +1,24 @@
 # QCM.md-corrector-nodejs-express
 
+## Guide d'utilisation
+
+### étape 1
+
+mettre a jour les dependances avec la commande npm update
+
+### étape 2
+
+lancer le serveur a partir de l'invité de commande avec npm start
+
+### étape 3
+
+rendez vous sur la page d'accueil, au premier lancement vous serez redirigé sur l'url /upload
+vous pourrez donc remplir le formulaire avec le fichier de correction et les copies
+
+### étape 4
+
+Une fois le formulaire envoyé, vous devez raffraichir la page afin d'afficher les resultats
+
 ## Structure du QCM.md
 
 ````md

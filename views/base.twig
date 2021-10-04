@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>
+         Correction QCM V1
+      </title>
+      {% block style %}
+         <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+            integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+            crossorigin="anonymous" />
+         <link rel="stylesheet" href="css/font-awesome/all.css" />
+         <link rel="stylesheet" href="css/main.css" />
+      {% endblock %}
+   </head>
+   <body>
+      <div class="container">
+         {% block body %}
+
+         {% endblock %}
+      </div>
+      {% block javascript %}
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"></script>
+      {% endblock %}
+   </body>
+</html>

@@ -1,0 +1,86 @@
+{% extends 'base.twig' %}
+{% block body %}
+	<header>
+		<h1 class="display-1 text-center mb-5 mt-1">Corrections du QCM</h1>
+		<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  			<a href="/reset" class="btn btn-primary btn-lg me-md-2" type="button">Reinitialiser</a>
+		</div>
+	</header>
+	<main>
+		{% set correction = datas[0] %}
+		<div class="accordion" id="accordionPanelsStayOpenExample">
+			{% for copie in datas %}
+				{% if not loop.first %}
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="panelsStayOpen-heading{{ loop.index}}">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse{{ loop.index}}" aria-expanded="false" style="::after{margin-left: 1rem;}" aria-controls="panelsStayOpen-collapse{{ loop.index}}">
+								<span class="text-right font-weight-bold w-80" style="margin-right: auto;font-weight: 900">{{ copie.name }}</span>
+								<span class="text-right font-weight-bold" style="font-weight: 900;">{{copie.note}}
+									/ 20</span>
+							</button>
+						</h2>
+						<div id="panelsStayOpen-collapse{{ loop.index}}" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading{{ loop.index}}">
+							<div class="accordion-body">
+								<div class="accordion" id="accordionPanelsStayOpenExample">
+									{% set qIndex = copie|length - 3 %}
+									{% for i in 0..qIndex %}
+										{% set question = copie[i + 1] %}
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="panelsStayOpen-heading{{ loop.parent.loop.index }}{{ loop.index}}">
+												<button class=" sub-accordion accordion-button collapsed {{ question.isCorrect ? " success" : " failure"}}" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse{{ loop.parent.loop.index }}{{ loop.index}}" aria-expanded="false" style="::after{margin-left: 1rem;}" aria-controls="panelsStayOpen-collapse{{ loop.index}}">
+													<span class="text-right font-weight-bold w-75" style="margin-right: auto;font-weight: 900">
+														{{ loop.index }}
+														)
+														{{ correction[loop.index]["question"] }}
+													</span>
+													<span class="text-right font-weight-bold w-25" style="font-weight: 900;">Coefficient :{{ correction[loop.index]["coef"] }}</span>
+
+
+													<span class="text-right font-weight-bold" style="font-weight: 900;">{{ question.isCorrect ? "<i class='fad fa-check fa-2x' style='color: green'></i>" : "<i class='fad fa-times fa-2x' style='color: red'></i>"}}</span>
+												</button>
+											</h2>
+											<div id="panelsStayOpen-collapse{{ loop.parent.loop.index }}{{ loop.index}}" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading{{ loop.parent.loop.index }}{{ loop.index}}">
+												<div class="accordion-body">
+													{% if correction[loop.index]["exemple"] %}
+																<pre class="code code-html">
+                                  <label>CODE</label>
+                                  <code>
+														{% for line in correction[loop.index]["exemple"] %}
+															{% if not loop.first %}
+                                    <code>{{ line }}</code>
+															{% endif %}
+														{% endfor %}
+                                  </code>
+                                </pre>
+													{% endif %}
+													{% for choice in question["choices"] %}
+														<input type="checkbox" name="" {{ choice["value"] ? "checked" : "" }} disabled>
+														<label>{{ choice.choice }}</label><br>
+													{% endfor %}
+													{% if not question.isCorrect %}
+														<div class="alert alert-danger" role="alert">
+															{% for correctChoice in correction[loop.index]["choices"] %}
+
+																{% if correctChoice["value"] %}
+																	<p>Correction :</p>
+																	<p>{{ correctChoice.choice }}</p>
+																{% endif %}
+
+															{% endfor %}
+														</div>
+													{% endif %}
+
+												</div>
+											</div>
+										</div>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+					</div>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</main>
+
+{% endblock %}

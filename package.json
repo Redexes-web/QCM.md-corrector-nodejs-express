@@ -1,0 +1,25 @@
+{
+   "name": "qcm.md-corrector-nodejs-express",
+   "version": "1.0.0",
+   "description": "qcm.md corrector make with NodeJS and Express",
+   "main": "server.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "nodemon server.js -e *"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Redexes-web/QCM.md-corrector-nodejs-express.git"
+   },
+   "author": "Redexes-Web",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/Redexes-web/QCM.md-corrector-nodejs-express/issues"
+   },
+   "homepage": "https://github.com/Redexes-web/QCM.md-corrector-nodejs-express#readme",
+   "dependencies": {
+      "express": "^4.17.1",
+      "express-fileupload": "^1.2.1",
+      "twig": "1.12"
+   }
+}

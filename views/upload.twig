@@ -1,0 +1,31 @@
+{% extends "base.twig" %}
+{% block body %}
+<header>
+		<h1 class="display-1 text-center mb-5 mt-1 text-center">Ajout des copies et de la correction du QCM</h1>
+</header>
+<main>
+{% if errors %}
+    <div class="alert alert-danger" role="alert">
+        <ul>
+        {% for error in errors %}
+            <li>{{ error }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+
+<form action="/" method="post" class="border border-primary rounded p-3" enctype='multipart/form-data'>
+<div class="mb-3">
+<label class="form-label display-6" for="customFile">Correction</label>
+<input type="file" class="form-control form-control-lg" id="correction" name="correction" />
+</div>
+<div class="mb-3">
+<label class="form-label display-6" for="customFile">Copies d'élèves</label>
+<input type="file" class="form-control form-control-lg" id="copies" name="copies" multiple/>
+</div>
+<div class="d-grid gap-2 col-6 mx-auto">
+<input type="submit" value="Envoyer" class="btn btn-primary btn-lg mt-2 ">
+</div>
+</form>
+</main>
+{% endblock %}

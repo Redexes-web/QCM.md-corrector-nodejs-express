@@ -4,7 +4,7 @@
 
 ### étape 1
 
-mettre a jour les dependances avec la commande npm update
+mettre a jour les dependances avec la commande npm install
 
 ### étape 2
 
@@ -37,4 +37,8 @@ const myMap = new Map([1, 2, 3]);
 - [ ] choix 3
 - [ ] choix 4
 ````
-````
+`````
+
+```
+
+```

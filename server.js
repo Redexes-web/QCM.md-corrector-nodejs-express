@@ -203,7 +203,6 @@ app.set('twig options', {
 
 app.get('/', async (req, res) => {
    const existed = await checkFileExists('data.json')
-   console.log(existed)
    existed
       ? res.render('index.twig', {
            datas: getDatas(),

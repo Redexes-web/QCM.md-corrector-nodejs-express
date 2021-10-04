@@ -4,7 +4,7 @@
 
 ### étape 1
 
-mettre a jour les dependances avec la commande npm install
+mettre a jour les dependances avec la commande `npm install`
 
 ### étape 2
 

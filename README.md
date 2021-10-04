@@ -8,7 +8,7 @@ mettre a jour les dependances avec la commande npm install
 
 ### étape 2
 
-lancer le serveur a partir de l'invité de commande avec npm start
+lancer le serveur a partir de l'invité de commande avec `npm start`
 
 ### étape 3
 
@@ -21,7 +21,7 @@ Une fois le formulaire envoyé, vous devez raffraichir la page afin d'afficher l
 
 ## Structure du QCM.md
 
-```md
+`````md
 ## Question X
 
 Question ? // le ? est necessaire au bon fonctionnement du programme
@@ -39,6 +39,9 @@ const myMap = new Map([1, 2, 3]);
 ````
 `````
 
+````
+
 ```
 
 ```
+````

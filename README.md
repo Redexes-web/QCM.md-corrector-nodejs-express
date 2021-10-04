@@ -2,7 +2,7 @@
 
 ## Structure du QCM.md
 
-````md
+```md
 ## Question X
 
 Question ? // le ? est necessaire au bon fonctionnement du programme

@@ -28,7 +28,7 @@ Question ? // le ? est necessaire au bon fonctionnement du programme
 
 _coefficient_ : x // si non definit est égale a 1
 
-``` // début de l'exemple
+``` // début de l'exemple // l'exemple est optionnel
 const myMap = new Map([1, 2, 3]);
 ``` // fin de l'exemple
 

@@ -12,7 +12,7 @@ lancer le serveur a partir de l'invité de commande avec `npm start`
 
 ### étape 3
 
-rendez vous sur la page d'accueil, au premier lancement vous serez redirigé sur l'url /upload
+rendez vous sur la page d'accueil, au premier lancement vous serez dirigé sur l'url localhost:8080
 vous pourrez donc remplir le formulaire avec le fichier de correction et les copies
 
 ### étape 4
